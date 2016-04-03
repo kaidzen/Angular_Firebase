@@ -6,7 +6,7 @@ angular.module('myApp.home', ['ngRoute', 'firebase'])
             controller: 'HomeCtrl'
         });
     }])
-    .controller('HomeCtrl', ['$scope', '$firebaseAuth', function($scope, $firebaseAuth){
+    .controller('HomeCtrl', ['$scope', '$location', '$firebaseAuth', function($scope, $location, $firebaseAuth){
 
         var firebaseObj = new Firebase("https://blistering-fire-43.firebaseio.com");
         var loginObj = $firebaseAuth(firebaseObj);
